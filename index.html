@@ -247,7 +247,14 @@ ______   ___   _____  _____  _      _       ___      _____  _____ ______  _____
             }
 
             .portrait {
-                width: 38%;
+                max-height: 50vh;
+                width: auto;
+                margin: auto;
+            }
+
+            .social {
+                display: flex;
+                justify-content: center;
             }
         }
 
@@ -265,18 +272,28 @@ ______   ___   _____  _____  _      _       ___      _____  _____ ______  _____
 </head>
 
 <body>
-    <img class="portrait" src="assets/img/pixel-art.webp" alt="Pixel Art Portrait of Mr Patilla Code" width="1200px"
-        height="1600px">
+    <img
+      class="portrait"
+      src="assets/img/pixel-art.webp"
+      alt="Pixel Art Portrait of Mr Patilla Code"
+      width="1200px"
+      height="1600px"
+      role="presentation"
+    >
     <div class="bio">
         <header class="header">
-            <h1 class="title">Patilla Code</h1>
+           <h1 class="title">Patilla Code</h1>
         </header>
-        <ul class="skills">
-            <li class="skills__item">Pythonista.</li>
-            <li class="skills__item">Developer.</li>
-            <li class="skills__item">Coder.</li>
-        </ul>
-        <blockquote class="tagline">If I can write a script to do it for me I most likely will.</blockquote>
+
+        <section>
+           <ul class="skills">
+               <li class="skills__item">Pythonista.</li>
+               <li class="skills__item">Developer.</li>
+               <li class="skills__item">Coder.</li>
+           </ul>
+           <blockquote class="tagline">If I can write a script to do it for me I most likely will.</blockquote>
+        </section>
+
         <footer class="social">
             <a class="social__item" href="https://github.com/patillacode">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
