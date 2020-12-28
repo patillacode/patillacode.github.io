@@ -1,4 +1,6 @@
-# PatillaCode
+---
+title: PatillaCode CV
+---
 
 <table>
 <tr>
@@ -10,6 +12,7 @@ Backend developer >10 years experience.
 Bilingual in English.
 B2 in German.
 ```
+
 </td>
 <td>
 
