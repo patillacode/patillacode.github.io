@@ -1,6 +1,4 @@
----
-title: PatillaCode CV
----
+<h1>Gonzalo Fernández de Aguirre</h1>
 
 <table>
 <tr>
@@ -17,9 +15,8 @@ B2 in German.
 <td>
 
 ```
-Email: patillacode@gmail.com
-IRL Name: Gonzalo Fernandez
-Location: Madrid - Spain
+patillacode@gmail.com
+Madrid - Spain
 ```
 
 </td>
@@ -27,8 +24,7 @@ Location: Madrid - Spain
 <td>
 
 [Github](https://github.com/patillacode)\
-[LinkedIn](https://www.linkedin.com/in/gonzalofernandezaguirre)\
-[Download CV](https://code.patilla.es/cv/cv.pdf)
+[LinkedIn](https://www.linkedin.com/in/gonzalofernandezaguirre)
 
 </td>
 </tr>
@@ -68,10 +64,10 @@ Mostly web projects.
 
 ### Education
 
-**Universidad Carlos III de Madrid** _(2005 - 2009)_\
+**Universidad Carlos III de Madrid** _(2005 - 2009)_
 Telecommunication Engineering
 
-**IES Vírgen de la Paloma** _(2009 - 2011)_\
+**IES Vírgen de la Paloma** _(2009 - 2011)_
 Superior Technician Degree: Computer Programming, Web Developing and Applications Design
 
 ### Languages and tools
