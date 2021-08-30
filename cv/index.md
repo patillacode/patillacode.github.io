@@ -35,13 +35,10 @@ Madrid - Spain
 
 **Remote Senior Backend Developer** _(mid 2017 - today)_ Madrid – Spain
 
-_(Since late 2018)_
-At StackBuilders working in the Twilio team as a Python dev.\
-Helping Twilio to have one of the best automated systems for communication plus a beautiful and up-to-date
-online documentation for their products.
+_(Late 2018 – Late 2021)_ Part of a talent hub called StackBuilders and working at Twilio as a senior Python dev, \
+helping them have one of the best automated systems for communication and beautiful and up-to-date online documentation of their products.
 
-_(Mid 2017 – Late 2018)_\
-I continued to work for Imagination with the same responsibilities, only 100% remotely.
+_(Mid 2017 – Late 2018)_ I continued to work for Imagination with the same responsibilities, only 100% remotely.
 
 
 **Imagination** _(2015 – mid 2017)_ London – United Kingdom\
@@ -57,9 +54,8 @@ We developed tools for VoIP service clients, security applications in telecommun
 Live dashboards, routing apps and fraud control.
 
 **Efors** _(2011 - 2012)_ Berlin - Germany\
-I was a backend and frontend programmer.\
-This was a very small start up and I had to learn and develop on whatever was needed.\
-Mostly web projects.
+I was a backend and frontend programmer. This was a very small start up and I had to learn and develop \
+on whatever was needed. Mostly web projects.
 
 
 ### Education
@@ -71,5 +67,16 @@ Telecommunication Engineering
 Superior Technician Degree: Computer Programming, Web Developing and Applications Design
 
 ### Languages and tools
-Rather than write down a list of languages and tools here I rather you contact me,\
-I most likely have worked with your current stack.
+
+Specialties:
+- Python (Django & Flask frameworks)
+- Redis, Celery, RabbitMQ
+- Postgres, MySQL, MongoDB, CouchDB
+- Wagtail
+- Continuous delivery, test driven
+
+Others:
+- HTML5, CSS3, JS, PHP, Java
+- Jenkins, Zabbix, Sentry
+- Unix, Bash scripting
+- AWS, Docker
