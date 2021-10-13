@@ -33,7 +33,7 @@ Madrid - Spain
 
 ### Experience
 
-**Remote Senior Backend Developer** _(mid 2017 - today)_ Madrid – Spain
+**Remote Senior Backend Developer** _(mid 2017 - late 2021)_ Madrid – Spain
 
 _(Late 2018 – Late 2021)_ Part of a talent hub called StackBuilders and working at Twilio as a senior Python dev, \
 helping them have one of the best automated systems for communication and beautiful and up-to-date online documentation of their products.
