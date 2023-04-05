@@ -1,0 +1,438 @@
+{
+  "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.3/schema/schema.json",
+  "settings": {
+    "language": "EN",
+    "MACVersion": "0.3"
+  },
+  "aboutMe": {
+    "profile": {
+      "name": "Gonzalo",
+      "surnames": "Fernández de Aguirre",
+      "title": "Pythonista",
+      "description": "I would love to work on useful, beautiful ideas. Motivation comes from what you do, interesting ideas drive us. The project needs to be interesting for a developer to give his best.\n",
+      "location": {
+        "country": "España",
+        "region": "Comunidad de Madrid",
+        "municipality": "Madrid",
+        "notes": "Autocompleted using Google Maps API"
+      }
+    },
+    "relevantLinks": [
+      {
+        "type": "other",
+        "URL": "https://code.patilla.es/"
+      },
+      {
+        "type": "github",
+        "URL": "https://github.com/patillacode"
+      },
+      {
+        "type": "linkedin",
+        "URL": "https://linkedin.com/in/gonzalofernandezaguirre"
+      }
+    ]
+  },
+  "experience": {
+    "jobs": [
+      {
+        "organization": {
+          "name": "TypeCode (New York, NY - USA)",
+          "image": {
+            "alt": "og.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/2e18804c-2668-46fa-9c33-a94216c268e0_og.png"
+          },
+          "URL": "https://typecode.com/"
+        },
+        "roles": [
+          {
+            "name": "Senior Backend Developer (Freelance)",
+            "startDate": "2022-11-01",
+            "challenges": [
+              {
+                "description": "- Jack of all trades when it comes to the backend.\n- All Wagtail decisions where ran by me and I focused on making the project work from the backend"
+              }
+            ],
+            "competences": [
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "Docker",
+                "type": "technology"
+              },
+              {
+                "name": "Github",
+                "type": "technology"
+              },
+              {
+                "name": "GraphQL",
+                "type": "technology"
+              },
+              {
+                "name": "Jenkins",
+                "type": "technology"
+              },
+              {
+                "name": "PostgreSQL",
+                "type": "technology"
+              },
+              {
+                "name": "Python",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Fastable/DE-CIX",
+          "image": {
+            "alt": "DE-CIX Logo-2866x1500-1200x628.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/5c0db771-cbe6-41c5-acf3-f6803791195f_de-cix-logo-2866x150.jpg"
+          },
+          "URL": "https://www.de-cix.net/"
+        },
+        "roles": [
+          {
+            "name": "Senior Backend Developer (Freelance)",
+            "startDate": "2021-10-01",
+            "finishDate": "2022-08-01",
+            "challenges": [
+              {
+                "description": "- Developed a custom API to communicate with specific network routing systems like NSP\nbut with the IX-API definition restrictions plus specific requirements defined by the client (DE-CIX) to build a \"CloudRouter\"."
+              }
+            ],
+            "competences": [
+              {
+                "name": "API",
+                "type": "technology"
+              },
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "GitLab",
+                "type": "technology"
+              },
+              {
+                "name": "K8s",
+                "type": "technology"
+              },
+              {
+                "name": "PostgreSQL",
+                "type": "technology"
+              },
+              {
+                "name": "Python",
+                "type": "technology"
+              },
+              {
+                "name": "SQLAlchemy",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Twilio (Los Angeles, CA - USA)",
+          "image": {
+            "alt": "Twilio.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/39609dcb-7d0a-40cb-ac95-37e709f9358a_twilio.png"
+          },
+          "URL": "https://www.twilio.com/en-us"
+        },
+        "roles": [
+          {
+            "name": "Senior Backend Developer (Freelance)",
+            "startDate": "2018-09-01",
+            "finishDate": "2021-10-01",
+            "challenges": [
+              {
+                "description": "- Designed and implemented an ad hoc solution for globalization, localization, and translation within a heavily customized version of Wagtail, an open-source CMS architecture.\n- Coded a very intense data migration of hundreds of unorganized, static code samples used in the documentation of Twilio libraries exposed in its website into dynamic code samples.\n- Became the go-to person for new system design questions, new features, and almost every question regarding the back end of the Twilio site."
+              }
+            ],
+            "competences": [
+              {
+                "name": "API",
+                "type": "technology"
+              },
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "Docker",
+                "type": "technology"
+              },
+              {
+                "name": "Flask",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "Jenkins",
+                "type": "technology"
+              },
+              {
+                "name": "PostgreSQL",
+                "type": "technology"
+              },
+              {
+                "name": "Python",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Imagination (London - UK)",
+          "image": {
+            "alt": "Members-Imagination (1).png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/178e4f7c-a096-4b22-9191-2fa4b32a2e55_members-imagination-.png"
+          },
+          "URL": "https://imagination.com/"
+        },
+        "roles": [
+          {
+            "name": "Senior Backend Developer",
+            "startDate": "2015-03-01",
+            "finishDate": "2017-08-01",
+            "challenges": [
+              {
+                "description": "- Senior Backend Developer as part of the Tech Studio team.\n- We developed Imagination's onsite show Platform (XPKit) from scratch.\n- Made critical decisions in the very fast-paced, high-stakes marketing environment. Our motto was, \"The show must go on, we will deliver.\"\n- Became the technical studio senior engineer and go-to person for all questions regarding the black box we created for shows to run smoothly.\n- _(Mid 2017 - Late 2018)_  I continued to work for Imagination with the same responsibilities, only 100% remotely."
+              }
+            ],
+            "competences": [
+              {
+                "name": "Bitbucket",
+                "type": "technology"
+              },
+              {
+                "name": "Celery",
+                "type": "technology"
+              },
+              {
+                "name": "CouchDB",
+                "type": "technology"
+              },
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "Docker",
+                "type": "technology"
+              },
+              {
+                "name": "Flask",
+                "type": "technology"
+              },
+              {
+                "name": "MySQL",
+                "type": "technology"
+              },
+              {
+                "name": "Python",
+                "type": "technology"
+              },
+              {
+                "name": "RabbitMQ",
+                "type": "technology"
+              },
+              {
+                "name": "Redis",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Stonework Solutions (Madrid - Spain)",
+          "image": {
+            "alt": "5ba8a8477c866639437a6563_images.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/565a3670-e210-446f-86d7-ff8a8466b4b7_5ba8a8477c866639437a.png"
+          }
+        },
+        "roles": [
+          {
+            "name": "Backend Developer/Head of the Development team.",
+            "startDate": "2012-01-01",
+            "finishDate": "2014-12-01",
+            "challenges": [
+              {
+                "description": "- We developed tools for VoIP service clients, security applications in telecommunications and media.\n- Live dashboards, routing apps and fraud control."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "Flask",
+                "type": "technology"
+              },
+              {
+                "name": "Git",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "MongoDB",
+                "type": "technology"
+              },
+              {
+                "name": "MySQL",
+                "type": "technology"
+              },
+              {
+                "name": "Python",
+                "type": "technology"
+              },
+              {
+                "name": "SVN",
+                "type": "technology"
+              },
+              {
+                "name": "SaaS",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Efors (Berlin - Germany)",
+          "image": {
+            "alt": "3c7528cd028fd7e30cc955a13bd58c49.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/04/05/cfbbbecd-9467-4df0-ba0c-d64d26ea9c8f_3c7528cd028fd7e30cc9.jpg"
+          }
+        },
+        "roles": [
+          {
+            "name": "Junior Developer",
+            "startDate": "2011-03-01",
+            "finishDate": "2011-12-01",
+            "challenges": [
+              {
+                "description": "- Developed and implemented front-end pages from scratch using HTML5, CSS, and jQuery\n- Refurbished the whole template system and database connections and integrated a cache mechanism for a better web experience.\n- This was a very small start up and I had to learn and develop on whatever was needed. Mostly web projects."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "PHP",
+                "type": "technology"
+              },
+              {
+                "name": "jQuery",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "knowledge": {
+    "languages": [
+      {
+        "name": "English",
+        "level": "Native or bilingual proficiency"
+      },
+      {
+        "name": "German",
+        "level": "Professional working proficiency"
+      },
+      {
+        "name": "Spanish",
+        "level": "Native or bilingual proficiency"
+      }
+    ],
+    "hardSkills": [
+      {
+        "skill": {
+          "name": "Python",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Django",
+          "type": "technology"
+        }
+      }
+    ],
+    "studies": [
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Superior Technician Degree: Computer Programming, Web Developing and Applications Design",
+        "startDate": "2009-09-01",
+        "finishDate": "2011-03-01",
+        "institution": {
+          "name": "IES Vírgen de la Paloma",
+          "description": ""
+        }
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Telecommunication Engineering",
+        "startDate": "2005-09-01",
+        "finishDate": "2009-09-01",
+        "institution": {
+          "name": "Universidad Carlos III de Madrid",
+          "description": ""
+        }
+      }
+    ]
+  },
+  "careerPreferences": {
+    "contact": {
+      "publicProfiles": [
+        {
+          "type": "linkedin",
+          "URL": "https://linkedin.com/in/gonzalofernandezaguirre"
+        }
+      ]
+    },
+    "preferences": {
+      "preferredRoles": [
+        "Backend Developer"
+      ]
+    },
+    "status": "searchingActively"
+  }
+}
