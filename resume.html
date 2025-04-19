@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Patilla Code, Pythonista, Developer, Coder, Resume, CV" />
+    <meta name="description" content="Patilla Code's professional resume and experience." />
+    <meta name="author" content="Patilla Code" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+    <title>Patilla Code - Resume</title>
+    <meta property="og:title" content="Patilla Code - Resume">
+    <meta name="description" content="Professional resume for Patilla Code: Pythonista, Developer and Coder.">
+    <meta property="og:image" content="https://code.patilla.es/assets/img/og-image.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a080e">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #fff;
+            --grey-light: #aaa;
+            --grey-medium: #666;
+            --black: #0a080e;
+            --green: #33c97c;
+            --speed: 1s;
+            --blue: #8cadec;
+            --blue-dark: #6b8bc8;
+            --beige: #fba379;
+            --red: #e73c7e;
+            --purple: #833ab4;
+            --transition: all 0.3s ease;
+            --container-width: 1100px;
+            --section-spacing: 2.5rem;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--grey-light);
+            background: var(--black);
+            font-family: 'JetBrains Mono', monospace;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.1rem);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--green);
+        }
+
+        h1, h2, h3, h4, h5 {
+            margin: 0 0 1rem 0;
+            line-height: 1.2;
+            color: var(--white);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 1.6rem + 2vw, 3.5rem);
+            background: linear-gradient(-45deg, #fba379, #e73c7e, #8cadec, #33c97c);
+            background-size: 300% 300%;
+            animation: gradient 15s ease infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--blue-dark);
+            margin-top: var(--section-spacing);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+            color: var(--green);
+        }
+
+        h4 {
+            font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
+            color: var(--beige);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--grey-medium);
+            margin: 2rem 0;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: var(--section-spacing);
+            padding: 2rem 0;
+            animation: fadeIn 1s ease;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--blue);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.2s ease;
+        }
+
+        .profile-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-subtitle {
+            color: var(--blue);
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .section {
+            margin-bottom: var(--section-spacing);
+            animation: fadeIn 1.4s ease;
+        }
+
+        .section-content {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--grey-medium);
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date, .project-date {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        .experience-position {
+            color: var(--beige);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--grey-medium);
+        }
+
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-list li::before {
+            content: "→";
+            color: var(--green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .project-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(139, 172, 236, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            background-color: rgba(51, 201, 124, 0.2);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(139, 172, 236, 0.15);
+            color: var(--blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .nav-bar {
+            background-color: rgba(10, 8, 14, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: slideDown 0.5s ease;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--grey-light);
+        }
+
+        .nav-link:hover {
+            color: var(--green);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--blue-dark);
+            color: var(--white);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: var(--green);
+            color: var(--black);
+        }
+
+        .footer {
+            background-color: rgba(10, 8, 14, 0.8);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid var(--grey-medium);
+        }
+
+        .footer-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-text {
+            color: var(--grey-light);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-link {
+            color: var(--blue);
+        }
+
+        .footer-link:hover {
+            color: var(--green);
+        }
+
+        .copyright {
+            color: var(--grey-medium);
+            font-size: 0.9rem;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 1rem 0;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Patilla Code</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="https://github.com/patillacode" class="nav-link" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/patillacode" class="nav-link" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="header" id="top">
+            <img src="assets/img/pixel-art-square.webp" alt="Patilla Code" class="profile-pic">
+            <h1 class="profile-title">PatillaCode</h1>
+            <h3 class="profile-title">Gonzalo Fernández</h3>
+            <p class="profile-subtitle">Senior Backend Developer / Software Engineer / Pythonista</p>
+            <div class="contact-links" id="contact">
+                <a href="mailto:patillacode@gmail.com" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+                    </svg>
+                    Email
+                </a>
+                <a href="https://github.com/patillacode" class="contact-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/gonzalofernandezaguirre/" class="contact-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <p>
+                    I'm a senior back-end developer with ten years of experience specializing in Python, Django, DRF, Flask and almost anything within the realm of Python back-end development.
+                </p>
+                <p>
+                    I've delivered a wide range of projects in my time. From a simple site for a small business all the way to migrating a monolith to a microservices architecture for a large enterprise or developing a custom API for a very specific need.
+                </p>
+                <p>
+                    I'm passionate about building useful, beautiful ideas and applying clean code practices.
+                </p>
+                <p>
+                    I understand and apply TDD, SOLID, KISS, DRY principles in my development work. I consider testing an indispensable part of development and I always apply it, both unit and integration testing.
+                </p>
+                <p>
+                    I am used to working in high performance teams, applying CD/CI. Also with agile methodologies.
+                </p>
+                <p>
+                    I love working on useful, beautiful ideas. Motivation comes from what you do, interesting ideas drive us. The project needs to be interesting for a developer to give his best.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Qida (Remote)</h3>
+                    <span class="experience-date">Feb 2025 - Present</span>
+                </div>
+                <p class="experience-position">Senior Backend Developer / Tech Lead</p>
+                <ul>
+                    <li>Serve as the go-to person for all backend-related matters within the project team.</li>
+                    <li>Building a brand new application for the medical/sanitary community from scratch with a multi-user architecture supporting doctors, caregivers, and patients.</li>
+                    <li>Leading the backend architecture design and implementation decisions.</li>
+                    <li>Developing secure and scalable solutions for handling sensitive medical data and user management.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Django REST Framework</span>
+                    <span class="tech-tag">Keycloak</span>
+                    <span class="tech-tag">EHR</span>
+                    <span class="tech-tag">Tunstall</span>
+                    <span class="tech-tag">Celery</span>
+                    <span class="tech-tag">RQ</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Type/Code (Remote)</h3>
+                    <span class="experience-date">Nov/2022 - Nov/2024</span>
+                </div>
+                <p class="experience-position">Senior Back-end Developer</p>
+                <ul>
+                    <li>Maintained and added lots of new features (from small tweaks to full new ideas) required by the final client (EL Education) around their Wagtail, Django, and Python-based website.</li>
+                    <li>Handled all major decisions for Wagtail and focused on making the project work from the back end.</li>
+                    <li>Communicated directly with the client on a weekly basis and served as the translator between the business and the technical requirements.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Wagtail CMS</span>
+                    <span class="tech-tag">GraphQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>NextPacket (Remote)</h3>
+                    <span class="experience-date">Oct/2021 - Aug/2022</span>
+                </div>
+                <p class="experience-position">Senior Back-end Developer</p>
+                <ul>
+                    <li>Developed a custom API to communicate with specific network routing systems like NSP but with the IX-API definition restrictions plus specific requirements defined by the client (DE-CIX) to build a "CloudRouter."</li>
+                    <li>Built the needed API from scratch using the latest technology available. The project was a solid piece of software, fully tested and built within the given timeline.</li>
+                    <li>Received very positive feedback from the client. They praised the quality, the attention to detail, and the great communication skills.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">REST</span>
+                    <span class="tech-tag">APIs</span>
+                    <span class="tech-tag">SQLAlchemy</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Twilio (Remote)</h3>
+                    <span class="experience-date">Sep/2018 - Oct/2021</span>
+                </div>
+                <p class="experience-position">Senior Back-end Developer</p>
+                <ul>
+                    <li>Designed and implemented an ad hoc solution for globalization, localization, and translation within a heavily customized version of Wagtail, an open-source CMS architecture.</li>
+                    <li>Coded a very intense data migration of hundreds of unorganized, static code samples used in the documentation of Twilio libraries exposed in its website into dynamic code samples.</li>
+                    <li>Became the go-to person for new system design questions, new features, and almost every question regarding the back end of the Twilio site.</li>
+                    <li>Chosen to be part of hiring processes by interviewing potential colleagues and then becoming a mentor to the newest members.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Wagtail CMS</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Data Migration</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Imagination (London)</h3>
+                    <span class="experience-date">Mar/2015 - Aug/2018</span>
+                </div>
+                <p class="experience-position">Senior Back-end Developer</p>
+                <ul>
+                    <li>Migrated a very big, outdated, and slow system built as a monolith into a modern microservices architecture. The system is the black box given to engineers during big shows, such as Detroit Auto Show and Canon's Photokina.</li>
+                    <li>Made critical decisions in the very fast-paced, high-stakes marketing environment. Our motto was, "The show must go on, we will deliver."</li>
+                    <li>Became the technical studio senior engineer and go-to person for all questions regarding the black box we created for shows to run smoothly.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">DRF</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Microservices</span>
+                    <span class="tech-tag">APIs</span>
+                    <span class="tech-tag">CouchDB</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Stonework Solutions (Madrid)</h3>
+                    <span class="experience-date">Jan/2012 - Feb/2015</span>
+                </div>
+                <p class="experience-position">Backend Developer/Head of the Development team</p>
+                <ul>
+                    <li>Developed security applications in telecommunications and media, programming in VoIP environments, prevention and detection of fraud in telecommunication systems.</li>
+                    <li>Created live dashboards, routing applications, and fraud control systems for VoIP service clients.</li>
+                    <li>Became the tech lead for a small team, owning new projects and managing the team to deliver on requests.</li>
+                    <li>Implemented a heavily customized web app as a real-time dashboard to enable big applications to route VoIP calls, filter calls, and expose the system through that custom dashboard.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">SaaS</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">SVN</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Efors (Berlin)</h3>
+                    <span class="experience-date">Jan/2011 - Dec/2011</span>
+                </div>
+                <p class="experience-position">Junior Developer</p>
+                <ul>
+                    <li>Developed and implemented front-end pages from scratch using HTML5, CSS, and jQuery.</li>
+                    <li>Refurbished the whole template system and database connections and integrated a cache mechanism for a better web experience.</li>
+                    <li>Worked in a very small startup environment requiring versatility and quick learning on various web projects.</li>
+                    <li>Refactored and redesigned the database models, making the whole app faster and more efficient.</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">jQuery</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python (Pocket pick)</li>
+                        <li>JavaScript</li>
+                        <li>Bash</li>
+                        <li>HTML/CSS</li>
+                        <li>PHP</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>Django/DRF</li>
+                        <li>Flask</li>
+                        <li>FastAPI</li>
+                        <li>Wagtail CMS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>GraphQL</li>
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                        <li>Mongo</li>
+                        <li>CouchDB</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Other Tools</h3>
+                    <ul class="skill-list">
+                        <li>Redis/Celery/RabbitMQ</li>
+                        <li>SQLAlchemy</li>
+                        <li>Keycloak</li>
+                        <li>Git</li>
+                        <li>CI/CD</li>
+                        <li>Docker/Kubernetes</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+
+            <div class="project-item">
+                <h3 class="project-title">Twilio Website Globalization System</h3>
+                <p>
+                    An ad hoc solution for globalization, localization, and translation within a heavily customized version of Wagtail. I designed and implemented the solution using Python metaclasses to customize each model within the current project (on top of the CMS) and make them translatable in one click.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Wagtail CMS</span>
+                    <span class="tech-tag">i18n</span>
+                    <span class="tech-tag">Metaclasses</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">Imagination's Black Server Box</h3>
+                <p>
+                    While in London, I assisted in migrating a very big, very outdated, and very slow system built as a monolith into a modern microservices architecture. Today, that system is the black box given to the engineers during big shows, such as Detroit Auto Show and Canon's Photokina.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Microservices</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">APIs</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">ppieces</h3>
+                <p>
+                    A custom (and opinionated) command-line utility designed to streamline the setup of new Python projects. It automates various tasks such as creating project directories, initializing git repositories, setting up virtual environments, handling requirements (with or without pip-tools) and installing pre-commit hooks.
+                </p>
+                <div class="project-links">
+                    <a href="https://pypi.org/project/ppieces/" class="project-link" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
+                          <path fill="currentColor" d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>
+                        </svg>
+                        PyPi
+                    </a>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CLI</span>
+                    <span class="tech-tag">Open Source</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">converter-cli</h3>
+                <p>
+                    A custom Python CLI for converting media files. The idea was for the CLI to ask users for the necessary information through the command line. This abstracted the process so the user could make just a few selections and get the expected output.
+                </p>
+                <div class="project-links">
+                    <a href="https://pypi.org/project/converter-cli/" class="project-link" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
+                          <path fill="currentColor" d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>
+                        </svg>
+                        PyPi
+                    </a>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CLI</span>
+                    <span class="tech-tag">Media Conversion</span>
+                    <span class="tech-tag">Open Source</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3 class="project-title">Side Projects</h3>
+                <p>
+                    I am always working on something else, always investigating and researching new technologies. I have worked on many side-projects with friends and as a solo developer. Some are available in my GitHub. Ask me about them!
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/patillacode" class="project-link" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 496 512">
+                            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Side Projects</span>
+                    <span class="tech-tag">Entrepenur</span>
+                    <span class="tech-tag">Open Source</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Universidad Carlos III</h3>
+                    <span class="experience-date">2005 - 2009</span>
+                </div>
+                <p class="experience-position">Bachelor's Degree in Telecommunications</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>IES Virgen de la Paloma</h3>
+                    <span class="experience-date">2009 - 2011</span>
+                </div>
+                <p class="experience-position">Superior Technician Degree in Computer Programming</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">"If I can write a script to do it for me I most likely will."</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="https://github.com/patillacode" class="footer-link" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gonzalofernandezaguirre/" class="footer-link" target="_blank">LinkedIn</a>
+            </div>
+            <p class="copyright">© 2025 Patilla Code. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="back-to-top">↑</a>
+
+    <script>
+        // Back to top button visibility
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+
+</html>
