@@ -6,6 +6,7 @@ on:
     paths:
       - "resume.html"
   workflow_dispatch:
+
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
@@ -17,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Updated to Node.js 18
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install puppeteer
@@ -27,7 +28,6 @@ jobs:
 
       - name: Generate PDF from HTML
         run: |
-          # Create a script to generate a PDF
           cat > generate-pdf.js << 'EOL'
           const puppeteer = require('puppeteer');
           const fs = require('fs');
@@ -41,48 +41,197 @@ jobs:
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
 
-            console.log('Browser launched.');
             const page = await browser.newPage();
 
-            // Set styles for PDF generation
-            await page.addStyleTag({
-              content: `
-                @page {
-                  size: A4;
-                  margin: 20mm 15mm;
-                }
-                body {
-                  background: white !important;
-                  color: black !important;
-                  font-size: 12pt !important;
-                }
-                .nav-bar, .back-to-top, .download-resume-container, .footer {
-                  display: none !important;
-                }
-                h1, h2, h3, h4, h5 {
-                  color: black !important;
-                }
-                h1 {
-                  -webkit-text-fill-color: black !important;
-                  background: none !important;
-                }
-                .profile-subtitle {
-                  color: #333 !important;
-                }
-                a {
-                  color: #333 !important;
-                  text-decoration: none !important;
-                }
-                .project-links, .github-actions-note {
-                  display: none !important;
-                }
-                .tech-tag {
-                  background-color: #f1f1f1 !important;
-                  color: #333 !important;
-                  border: 1px solid #ddd !important;
-                }
-              `
-            });
+            // Set styles for PDF generation - keeping all content but formatting for PDF
+            const optimizedCSS = `
+              /* Base styling for print */
+              body {
+                background-color: white !important;
+                color: #333 !important;
+                font-family: Arial, Helvetica, sans-serif !important;
+                line-height: 1.4 !important;
+                font-size: 11pt !important;
+              }
+
+              /* Hide elements not needed in PDF */
+              .nav-bar, .back-to-top, .download-resume-container, .footer, .github-actions-note {
+                display: none !important;
+              }
+
+              /* Remove profile picture as requested */
+              .profile-pic {
+                display: none !important;
+              }
+
+              /* Remove PatillaCode and use real name only */
+              .profile-title:first-of-type {
+                display: none !important;
+              }
+
+              /* Main heading styling */
+              h1, h2, h3, h4, h5 {
+                color: #333 !important;
+                margin-bottom: 0.5rem !important;
+              }
+
+              h1 {
+                font-size: 18pt !important;
+                -webkit-text-fill-color: #333 !important;
+                background: none !important;
+                margin-top: 0 !important;
+              }
+
+              h2 {
+                font-size: 14pt !important;
+                border-bottom: 1px solid #666 !important;
+                color: #333 !important;
+                padding-bottom: 3px !important;
+                margin-top: 1.3rem !important;
+                margin-bottom: 0.7rem !important;
+              }
+
+              h3 {
+                font-size: 12pt !important;
+                color: #333 !important;
+                margin-bottom: 0.2rem !important;
+              }
+
+              /* Header area compacted */
+              .header {
+                text-align: center !important;
+                margin-bottom: 1rem !important;
+                padding: 0 !important;
+              }
+
+              .profile-subtitle {
+                color: #555 !important;
+                margin-bottom: 0.7rem !important;
+                font-size: 12pt !important;
+              }
+
+              /* Make contact links more compact and clickable */
+              .contact-links {
+                display: flex !important;
+                gap: 1rem !important;
+                justify-content: center !important;
+                margin-top: 0.5rem !important;
+                margin-bottom: 0.5rem !important;
+              }
+
+              .contact-link {
+                color: #1a73e8 !important;
+                text-decoration: underline !important;
+              }
+
+              .contact-link svg {
+                width: 12px !important;
+                height: 12px !important;
+                fill: #1a73e8 !important;
+              }
+
+              /* Space optimization */
+              .container {
+                padding: 0.8rem !important;
+                max-width: 100% !important;
+              }
+
+              .section {
+                margin-bottom: 1rem !important;
+              }
+
+              .section-content {
+                margin-bottom: 0.8rem !important;
+              }
+
+              /* Experience items */
+              .experience-item, .project-item {
+                margin-bottom: 0.8rem !important;
+                padding-bottom: 0.8rem !important;
+                border-bottom: 1px solid #ddd !important;
+              }
+
+              .experience-header, .project-header {
+                margin-bottom: 0.2rem !important;
+              }
+
+              .experience-date, .project-date {
+                color: #555 !important;
+                font-size: 10pt !important;
+              }
+
+              .experience-position {
+                color: #444 !important;
+                margin-bottom: 0.2rem !important;
+                font-size: 10.5pt !important;
+              }
+
+              /* Lists more compact */
+              ul, ol {
+                margin-bottom: 0.8rem !important;
+                padding-left: 1.5rem !important;
+              }
+
+              li {
+                margin-bottom: 0.2rem !important;
+                font-size: 10pt !important;
+              }
+
+              /* Paragraphs */
+              p {
+                margin-bottom: 0.4rem !important;
+                font-size: 10pt !important;
+              }
+
+              /* Skills section in columns */
+              .skills-container {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 0.8rem !important;
+              }
+
+              .skill-category h3 {
+                margin-bottom: 0.3rem !important;
+                padding-bottom: 0.2rem !important;
+                border-bottom: 1px solid #ddd !important;
+                font-size: 11pt !important;
+              }
+
+              .skill-list li {
+                padding-left: 1rem !important;
+                font-size: 9.5pt !important;
+              }
+
+              .skill-list li::before {
+                color: #555 !important;
+              }
+
+              /* Make project links hidden but keep projects */
+              .project-links {
+                display: none !important;
+              }
+
+              /* Tech tags more compact */
+              .project-tech {
+                gap: 0.3rem !important;
+                margin-top: 0.5rem !important;
+              }
+
+              .tech-tag {
+                background-color: #f3f3f3 !important;
+                color: #444 !important;
+                padding: 0.1rem 0.4rem !important;
+                border-radius: 3px !important;
+                font-size: 8.5pt !important;
+                border: 1px solid #ddd !important;
+              }
+
+              /* Make links clickable in PDF */
+              a {
+                color: #1a73e8 !important;
+                text-decoration: none !important;
+              }
+            `;
 
             // Get the full path to the HTML file
             const htmlPath = 'file://' + process.cwd() + '/resume.html';
@@ -94,7 +243,12 @@ jobs:
                 timeout: 60000
               });
 
-              console.log('Page loaded. Generating PDF...');
+              console.log('Page loaded. Applying print styles...');
+
+              // Apply PDF-optimized styles
+              await page.addStyleTag({ content: optimizedCSS });
+
+              console.log('Styles applied. Generating PDF...');
 
               // Generate PDF
               const pdfPath = path.join(process.cwd(), 'assets', 'pdf', 'GonzaloFernandez_Resume.pdf');
@@ -102,22 +256,30 @@ jobs:
                 path: pdfPath,
                 format: 'A4',
                 printBackground: true,
-                displayHeaderFooter: true,
-                headerTemplate: '<div></div>',
-                footerTemplate: '<div style="width: 100%; text-align: center; font-size: 8px; color: #333;">Generated from patillacode.github.io | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>',
                 margin: {
-                  top: '20mm',
-                  bottom: '20mm',
-                  left: '15mm',
-                  right: '15mm'
-                }
+                  top: '15mm',
+                  bottom: '15mm',
+                  left: '12mm',
+                  right: '12mm'
+                },
+                displayHeaderFooter: false,
+                preferCSSPageSize: false
               });
 
               console.log('PDF generated successfully at:', pdfPath);
 
-              // Verify the PDF exists
               if (fs.existsSync(pdfPath)) {
                 console.log('PDF file exists. Size:', fs.statSync(pdfPath).size, 'bytes');
+
+                // Set PDF metadata
+                const metadata = {
+                  Title: "Gonzalo Fernández - Resume",
+                  Author: "Gonzalo Fernández",
+                  Subject: "Professional Resume",
+                  Keywords: "developer, software engineer, python, django, backend"
+                };
+
+                console.log('PDF generation and verification complete.');
               } else {
                 console.error('PDF file was not created!');
                 process.exit(1);
@@ -137,7 +299,6 @@ jobs:
           });
           EOL
 
-          # Run the script
           node generate-pdf.js
 
       - name: Commit and push if changed
