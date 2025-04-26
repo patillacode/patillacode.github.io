@@ -5,7 +5,7 @@ on:
     branches: [main, master]
     paths:
       - "resume.html"
-
+  workflow_dispatch:
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
