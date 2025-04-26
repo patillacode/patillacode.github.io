@@ -64,22 +64,25 @@ jobs:
                 display: none !important;
               }
 
-              /* Remove PatillaCode and use real name only */
-              .profile-title:first-of-type {
+              /* Fix name heading - hide PatillaCode but show Gonzalo Fernández */
+              h1.profile-title {
                 display: none !important;
+              }
+
+              /* Make real name the main heading */
+              h3.profile-title {
+                display: block !important;
+                font-size: 22pt !important;
+                color: #333 !important;
+                margin-top: 10px !important;
+                margin-bottom: 10px !important;
+                font-weight: bold !important;
               }
 
               /* Main heading styling */
               h1, h2, h3, h4, h5 {
                 color: #333 !important;
                 margin-bottom: 0.5rem !important;
-              }
-
-              h1 {
-                font-size: 18pt !important;
-                -webkit-text-fill-color: #333 !important;
-                background: none !important;
-                margin-top: 0 !important;
               }
 
               h2 {
@@ -91,7 +94,7 @@ jobs:
                 margin-bottom: 0.7rem !important;
               }
 
-              h3 {
+              h3:not(.profile-title) {
                 font-size: 12pt !important;
                 color: #333 !important;
                 margin-bottom: 0.2rem !important;
@@ -106,7 +109,7 @@ jobs:
 
               .profile-subtitle {
                 color: #555 !important;
-                margin-bottom: 0.7rem !important;
+                margin-bottom: 1rem !important;
                 font-size: 12pt !important;
               }
 
@@ -116,7 +119,7 @@ jobs:
                 gap: 1rem !important;
                 justify-content: center !important;
                 margin-top: 0.5rem !important;
-                margin-bottom: 0.5rem !important;
+                margin-bottom: 0.8rem !important;
               }
 
               .contact-link {

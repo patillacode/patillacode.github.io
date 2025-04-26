@@ -1,0 +1,50 @@
+@media print {
+
+    .nav-bar,
+    .back-to-top,
+    .download-resume-container,
+    .footer,
+    .project-links {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    h1 {
+        background: none;
+        -webkit-text-fill-color: black;
+        color: black;
+    }
+
+    .profile-subtitle {
+        color: #333;
+    }
+
+    .tech-tag {
+        background-color: #f1f1f1;
+        color: #333;
+        border: 1px solid #ddd;
+    }
+}

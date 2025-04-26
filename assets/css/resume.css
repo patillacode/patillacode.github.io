@@ -1,0 +1,448 @@
+/* ==========================================
+   1. Typography & Basic Element Styling
+   ========================================== */
+body {
+    font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.1rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+h1 {
+    font-size: clamp(2rem, 1.6rem + 2vw, 3.5rem);
+    background: linear-gradient(-45deg, #fba379, #e73c7e, #8cadec, #33c97c);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--blue-dark);
+    margin-top: var(--section-spacing);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+    color: var(--green);
+}
+
+h4 {
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
+    color: var(--beige);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul,
+ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--grey-medium);
+    margin: 2rem 0;
+}
+
+/* ==========================================
+   2. Layout & Container Styles
+   ========================================== */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: var(--section-spacing);
+    animation: fadeIn 1.4s ease;
+}
+
+.section-content {
+    margin-bottom: 2rem;
+}
+
+/* ==========================================
+   3. Header & Profile Styles
+   ========================================== */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--section-spacing);
+    padding: 2rem 0;
+    animation: fadeIn 1s ease;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--blue);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s ease;
+}
+
+.profile-title {
+    margin-bottom: 0.5rem;
+}
+
+.profile-subtitle {
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+}
+
+/* ==========================================
+   4. Contact Links
+   ========================================== */
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* ==========================================
+   5. Navigation Bar
+   ========================================== */
+.nav-bar {
+    background-color: rgba(10, 8, 14, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.5s ease;
+}
+
+.nav-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--grey-light);
+}
+
+.nav-link:hover {
+    color: var(--green);
+}
+
+/* ==========================================
+   6. Experience & Project Items
+   ========================================== */
+.experience-item,
+.project-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey-medium);
+}
+
+.experience-item:last-child,
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header,
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.experience-date,
+.project-date {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.experience-position {
+    color: var(--beige);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(139, 172, 236, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    background-color: rgba(51, 201, 124, 0.2);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background-color: rgba(139, 172, 236, 0.15);
+    color: var(--blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   7. Skills Section
+   ========================================== */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--grey-medium);
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-list li::before {
+    content: "→";
+    color: var(--green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==========================================
+   8. Footer
+   ========================================== */
+.footer {
+    background-color: rgba(10, 8, 14, 0.8);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid var(--grey-medium);
+}
+
+.footer-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-text {
+    color: var(--grey-light);
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    color: var(--blue);
+}
+
+.footer-link:hover {
+    color: var(--green);
+}
+
+.copyright {
+    color: var(--grey-medium);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   9. Back to Top Button
+   ========================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--blue-dark);
+    color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: var(--green);
+    color: var(--black);
+}
+
+/* ==========================================
+   10. Download Resume Button
+   ========================================== */
+.download-resume-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--section-spacing);
+}
+
+.download-resume-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.download-resume-btn:hover {
+    background: linear-gradient(135deg, var(--green), var(--blue-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.download-resume-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.download-resume-btn span {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+/* ==========================================
+   11. Animations
+   ========================================== */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   12. Media Queries
+   ========================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 1rem 0;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
