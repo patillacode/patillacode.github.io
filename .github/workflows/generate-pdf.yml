@@ -17,12 +17,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18" # Updated to Node.js 18
 
       - name: Install dependencies
-        run: |
-          npm install puppeteer
-          npm install -g @puppeteer/headless-chrome-pdf
+        run: npm install puppeteer
 
       - name: Create PDF directory if it doesn't exist
         run: mkdir -p assets/pdf
@@ -32,13 +30,18 @@ jobs:
           # Create a script to generate a PDF
           cat > generate-pdf.js << 'EOL'
           const puppeteer = require('puppeteer');
+          const fs = require('fs');
+          const path = require('path');
 
           async function generatePDF() {
+            console.log('Starting PDF generation...');
+
             const browser = await puppeteer.launch({
               headless: 'new',
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
 
+            console.log('Browser launched.');
             const page = await browser.newPage();
 
             // Set styles for PDF generation
@@ -78,41 +81,58 @@ jobs:
                   color: #333 !important;
                   border: 1px solid #ddd !important;
                 }
-                @media print {
-                  html, body {
-                    height: auto !important;
-                  }
-                }
               `
             });
 
             // Get the full path to the HTML file
-            await page.goto('file://' + process.cwd() + '/resume.html', {
-              waitUntil: 'networkidle0'
-            });
+            const htmlPath = 'file://' + process.cwd() + '/resume.html';
+            console.log('Loading HTML from:', htmlPath);
 
-            // Generate PDF
-            await page.pdf({
-              path: 'assets/pdf/GonzaloFernandez_Resume.pdf',
-              format: 'A4',
-              printBackground: true,
-              displayHeaderFooter: true,
-              headerTemplate: '<div></div>',
-              footerTemplate: '<div style="width: 100%; text-align: center; font-size: 8px; color: #333;">Generated from patillacode.github.io | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>',
-              margin: {
-                top: '20mm',
-                bottom: '20mm',
-                left: '15mm',
-                right: '15mm'
+            try {
+              await page.goto(htmlPath, {
+                waitUntil: 'networkidle0',
+                timeout: 60000
+              });
+
+              console.log('Page loaded. Generating PDF...');
+
+              // Generate PDF
+              const pdfPath = path.join(process.cwd(), 'assets', 'pdf', 'PatillaCode_Resume.pdf');
+              await page.pdf({
+                path: pdfPath,
+                format: 'A4',
+                printBackground: true,
+                displayHeaderFooter: true,
+                headerTemplate: '<div></div>',
+                footerTemplate: '<div style="width: 100%; text-align: center; font-size: 8px; color: #333;">Generated from patillacode.github.io | Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>',
+                margin: {
+                  top: '20mm',
+                  bottom: '20mm',
+                  left: '15mm',
+                  right: '15mm'
+                }
+              });
+
+              console.log('PDF generated successfully at:', pdfPath);
+
+              // Verify the PDF exists
+              if (fs.existsSync(pdfPath)) {
+                console.log('PDF file exists. Size:', fs.statSync(pdfPath).size, 'bytes');
+              } else {
+                console.error('PDF file was not created!');
+                process.exit(1);
               }
-            });
+            } catch (error) {
+              console.error('Error during page loading or PDF generation:', error);
+              process.exit(1);
+            }
 
             await browser.close();
-            console.log('PDF generated successfully!');
+            console.log('Browser closed. PDF generation complete.');
           }
 
           generatePDF().catch(err => {
-            console.error('Error generating PDF:', err);
+            console.error('Error in PDF generation process:', err);
             process.exit(1);
           });
           EOL
@@ -124,5 +144,5 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add assets/pdf/GonzaloFernandez_Resume.pdf
+          git add assets/pdf/PatillaCode_Resume.pdf
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update resume PDF" && git push)
