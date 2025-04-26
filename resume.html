@@ -457,6 +457,89 @@
                 right: 1rem;
             }
         }
+
+        .download-resume-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--section-spacing);
+        }
+
+        .download-resume-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-resume-btn:hover {
+            background: linear-gradient(135deg, var(--green), var(--blue-dark));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .download-resume-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .download-resume-btn span {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--white);
+        }
+
+        @media print {
+            .nav-bar, .back-to-top, .download-resume-container, .footer, .project-links {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+                color: black;
+                font-size: 12pt;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            h1, h2, h3, h4, h5 {
+                color: black;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            h1 {
+                background: none;
+                -webkit-text-fill-color: black;
+                color: black;
+            }
+
+            .profile-subtitle {
+                color: #333;
+            }
+
+            .tech-tag {
+                background-color: #f1f1f1;
+                color: #333;
+                border: 1px solid #ddd;
+            }
+        }
     </style>
 </head>
 
@@ -499,6 +582,15 @@
                 </a>
             </div>
         </header>
+
+        <div class="download-resume-container">
+            <a href="assets/pdf/GonzaloFernandez_Resume.pdf" class="download-resume-btn" download>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+                    <path fill="#ff6900" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                </svg>
+                <span>Download PDF Resume</span>
+            </a>
+        </div>
 
         <section class="section" id="about">
             <h2>About Me</h2>
