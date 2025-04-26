@@ -97,7 +97,7 @@ jobs:
               console.log('Page loaded. Generating PDF...');
 
               // Generate PDF
-              const pdfPath = path.join(process.cwd(), 'assets', 'pdf', 'PatillaCode_Resume.pdf');
+              const pdfPath = path.join(process.cwd(), 'assets', 'pdf', 'GonzaloFernandez_Resume.pdf');
               await page.pdf({
                 path: pdfPath,
                 format: 'A4',
@@ -144,5 +144,5 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add assets/pdf/PatillaCode_Resume.pdf
+          git add assets/pdf/GonzaloFernandez_Resume.pdf
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update resume PDF" && git push)
